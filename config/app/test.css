@@ -1,0 +1,14 @@
+
+#box{
+  background-color:red;
+  width:46px;
+  height:43px;
+  background: url(img/test.png) no-repeat;
+}
+
+.avatar{
+  box-shadow: 0 0 5px red;
+  width:46px;
+  height:43px;
+  background: url(img/test.png) no-repeat;
+}

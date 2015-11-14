@@ -1,0 +1,3 @@
+1. webpack -w  => grunt-watch gulp-watch
+2. webpack -p => uglify
+3. webpack -d => sourcemap
