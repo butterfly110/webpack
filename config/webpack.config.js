@@ -1,15 +1,23 @@
-var DEBUG = true;
+var DEBUG             = true;
+var path              = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+
+
 
 module.exports = {
     entry:[
         './app/main.js'
     ],
+    resolve: {
+        alias: {
+
+        }
+    },
     output: {
         path: __dirname + '/dist/',
         publicPath: DEBUG ? "/dist/" : '//aliyun.com',
-        filename: 'bundle.js?v=[chunkhash]'
+        filename: 'bundle.js?v=[hash]'
     },
     plugins: [
         new ExtractTextPlugin('styles.css'),

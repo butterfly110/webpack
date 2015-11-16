@@ -1,8 +1,8 @@
 // es6 react
-import {React} from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import Hello from './hello.jsx';
-// console.log(ReactDOM);
-React.render(<Hello />, document.getElementById('react'));
+ReactDOM.render(<Hello />, document.getElementById('react'));
 
 // commonjs
 var Math = require('./Math');
