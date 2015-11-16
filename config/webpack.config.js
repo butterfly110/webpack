@@ -1,5 +1,7 @@
 var DEBUG = true;
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
     entry:[
         './app/main.js'
@@ -10,7 +12,13 @@ module.exports = {
         filename: 'bundle.js?v=[chunkhash]'
     },
     plugins: [
-        new ExtractTextPlugin('styles.css')
+        new ExtractTextPlugin('styles.css'),
+        new HtmlWebpackPlugin({
+            template: 'app/index.html',
+            filename: 'index.html',
+            chunks:   '*',
+            inject:   'body'
+        })
     ],
     module: {
         loaders: [{
